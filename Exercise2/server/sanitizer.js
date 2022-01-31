@@ -18,7 +18,7 @@ const toBuildings = (input) => {
 
 const toElevator = (input) => {
     return {
-        active: Boolean(input.active),
+        active: input.active === true || input.active === 'true',
         status: input.status,
         floor: Number(input.floor),
         action: input.action

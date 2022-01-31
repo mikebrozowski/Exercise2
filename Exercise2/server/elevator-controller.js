@@ -47,6 +47,49 @@ router.get('/:id', (req, res, next) => {
 /**
  * @swagger
  * /building/{address}/elevator/{index}:
+ *  post:
+ *      description: Go to floor, given building ID, elevator ID, and requested floor number.
+ *      responses:
+ *          '200':
+ *              description: Updated elevator information successfully.
+ *          '400':
+ *              description: The building with the given ID may not exist. The elevator with the given ID may not exist.
+ *      parameters:
+ *      -
+ *          name: address
+ *          in: path
+ *          schema:
+ *              type: integer
+ *          required: true
+ *          description: The ID of the building you are trying to update.
+ *      -
+ *          name: index
+ *          in: path
+ *          schema:
+ *              type: integer
+ *          required: true
+ *          description: The ID of the elevator you are trying to update.
+ */
+router.post('/:id', (req, res, next) => {
+    // floor property needs to be validated and sanitized
+    const address = req.params.buildingId;
+    const index = req.params.id;
+    const floor = req.body.floor;
+
+    const result = data.goToFloor(address, index, floor);
+
+    if (result === true) {
+        res.sendStatus(codes.OK);
+    } else {
+        res.sendStatus(codes.BAD_REQUEST);
+    }
+    
+    next();
+});
+
+/**
+ * @swagger
+ * /building/{address}/elevator/{index}:
  *  put:
  *      description: Update elevator information by a given building ID and elevator ID.
  *      responses:

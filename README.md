@@ -1,23 +1,20 @@
-mike, remember to do a readme with instructions on how to run this
-possibly export your postman collection
+Github URL: https://github.com/mikebrozowski/Exercise2
 
-github url https://github.com/mikebrozowski/Exercise2
+Node version: v16.13.1
+NPM version: 8.1.2
 
-node version v16.13.1
-npm version 8.1.2
+Web framework - Express https://expressjs.com/
+Web security - Helmet https://helmetjs.github.io/
+Testing framework - Mocha https://mochajs.org/
+API documentation - Swagger https://swagger.io/solutions/api-documentation/
+    Swagger API endpoint: http://localhost:3030/api-docs/#/
 
+Required dependencies are saved in the package.json.
 
-web framework - express https://expressjs.com/
-web security - helmet https://helmetjs.github.io/
-unit framework - mocha https://mochajs.org/
-api documentation - swagger https://swagger.io/solutions/api-documentation/
-memory database - redis / node-redis https://github.com/redis/node-redis
-front-end framework - react https://reactjs.org/
-	styling - scss
-
-required dependencies are saved, requires "npm install" before running "npm start"
-
-to start the server: node solution/server/app.js
-to start the webapp: node solution/web/app.js
-
-swagger api http://localhost:3030/api-docs/#/
+Instructions
+    First time setup:
+        In the "Exercise2/server" directory, execute command: "npm install"
+    To start the server:
+        In the "Exercise2/server" directory, execute command: "node app.js"
+    To run the unit tests:
+        In the "Exercise2/server" directory, execute command: "npm test"

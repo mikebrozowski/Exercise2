@@ -1,7 +1,12 @@
 {
   "dependencies": {
     "express": "^4.17.2",
+    "helmet": "^5.0.2",
+    "mocha": "^9.2.0",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.3.0"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }

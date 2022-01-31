@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
 const swagDoc = require('swagger-jsdoc');
 const swagUi = require('swagger-ui-express');
 
@@ -13,6 +14,9 @@ const data = require('./data');
 
 const buildingController = require('./building-controller');
 const elevatorController = require('./elevator-controller');
+
+// helmet helps security by adding various HTTP headers
+app.use(helmet());
 
 // swagger business
 const swagOptions = {
@@ -180,7 +184,10 @@ app.use((req, res, next) => {
     next();
 });
 
-// run server
-app.listen(port, () => {
-    console.log(`running on ${port}`);
+// load data from local file
+data.readCityData(() => {
+    // run server
+    app.listen(port, () => {
+        console.log(`Running on ${port}`);
+    });
 });

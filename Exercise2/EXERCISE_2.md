@@ -54,8 +54,14 @@ Notes:
 ## Questions ##
 
  1. How can your implementation be optimized?
- 1. How much time did you spend on your implementation?
- 1. What was most challenging for you?
+ 2. How much time did you spend on your implementation?
+ 3. What was most challenging for you?
+
+## Answers ##
+
+ 1. This project is lacking scalability. It reads all saved data into an object and frequently makes duplicate objects rather than replacing values only when necessary. A NoSQL database would work well with this current implementation, because it is saving/loading JSON, which fits well into a document-based database.
+ 2. Four or five hours total.
+ 3. I'm not sure I would call any particular part challenging, but it would probably be ensuring the validator/sanitizer functions are working correctly.
 
 ## Next Steps ##
 

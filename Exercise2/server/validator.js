@@ -120,14 +120,3 @@ module.exports = {
     isValidElevator: isValidElevator,
     isValidElevators: isValidElevators,
 };
-
-// building object
-// 	floorCount: number (must be >= 1)
-//  ground: number (0 = no basement, must be < floorCount)
-// 	elevators: {}
-
-// elevator object
-// 	active: bool
-// 	status: string // doors open, doors closed
-// 	floor: number (must be within boundaries)
-// 	action: string // for phase 4 section, this would be the intended action
