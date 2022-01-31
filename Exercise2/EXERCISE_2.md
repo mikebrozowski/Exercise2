@@ -16,8 +16,8 @@ As you progress through the steps, feel free to add comments to the code about *
 ### Phase 1 - Setup ###
 
  1. Clone this repository to your local machine
- 1. Create the basic structure needed for your API with your chosen framework
- 1. Add a README.md in this exercise folder with the basic requirements and steps to run the project locally
+ 2. Create the basic structure needed for your API with your chosen framework
+ 3. Add a README.md in this exercise folder with the basic requirements and steps to run the project locally
 
 ### Phase 2 - Main Implementation ###
 
